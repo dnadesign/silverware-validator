@@ -22,6 +22,7 @@ use SilverStripe\Forms\FormField;
 use SilverStripe\Forms\Validator as BaseValidator;
 use SilverStripe\ORM\ArrayLib;
 use SilverStripe\View\Requirements;
+use SilverWare\Validator\Backend;
 use SilverWare\Validator\Rules\RequiredRule;
 
 /**
@@ -65,6 +66,13 @@ class Validator extends BaseValidator
      * @var boolean
      */
     protected $serverSide = true;
+
+    /**
+     * Backend for validator
+     *
+     * @var Backend
+     */
+    public $backend;
     
     /**
      * Defines the value of the clientSide attribute.
